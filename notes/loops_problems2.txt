@@ -1,0 +1,138 @@
+Count Characters in a String:
+Description: Write a program that counts the occurrences of each character in a given string.
+Example:
+Input: "hello"
+Output: {'h': 1, 'e': 1, 'l': 2, 'o': 1}
+
+Find Maximum and Minimum:
+Description: Write a program to find the maximum and minimum numbers in a given list.
+Example:
+Input: [4, 9, 2, 7, 5]
+Output: Maximum: 9, Minimum: 2
+
+Calculate Average:
+Description: Write a program that calculates the average of a given list of numbers.
+Example:
+Input: [2, 4, 6, 8]
+Output: 5.0
+
+Check Palindrome:
+Description: Write a program to check if a given string is a palindrome.
+Example:
+Input: "racecar"
+Output: True
+Remove Duplicates:
+
+Description: Write a program that removes duplicates from a given list.
+Example:
+Input: [1, 2, 3, 2, 4, 1, 5]
+Output: [1, 2, 3, 4, 5]
+
+Reverse List Order:
+Description: Write a program that reverses the order of elements in a given list.
+Example:
+Input: [1, 2, 3, 4, 5]
+Output: [5, 4, 3, 2, 1]
+
+Check Armstrong Number:
+Description: Write a program to check if a given number is an Armstrong number.
+Example:
+Input: 153
+Output: True
+
+Remove Characters:
+Description: Write a program that removes specified characters from a given string.
+Example:
+Input: "Hello World", ['l', 'o']
+Output: "He Wrld"
+
+Check Perfect Number:
+Description: Write a program to check if a given number is a perfect number.
+Example:
+Input: 28
+Output: True
+
+Print Prime Factors:
+Description: Write a program that prints all the prime factors of a given number.
+Example:
+Input: 24
+Output: 2, 3
+
+Calculate GCD:
+Description: Write a program to calculate the greatest common divisor (GCD) of two given numbers.
+Example:
+Input: 24, 36
+Output: 12
+
+Count Words in a Sentence:
+Description: Write a program that counts the number of words in a given sentence.
+Example:
+Input: "Hello, how are you?"
+Output: 4
+
+Find Common Elements:
+Description: Write a program that finds common elements between two given lists.
+Example:
+Input: [1, 2, 3, 4, 5], [4, 5, 6, 7, 8]
+Output: [4, 5]
+
+Calculate Square Root:
+Description: Write a program to calculate the square root of a given number using the Newton-Raphson method.
+Example:
+Input: 16
+Output: 4.0
+
+Swap Case:
+Description: Write a program that swaps the case (upper to lower and vice versa) of each character in a given string.
+Example:
+Input: "Hello, World!"
+Output: "hELLO, wORLD!"
+
+
+Password Strength Checker:
+Description: Write a program that checks the strength of a password based on the following criteria:
+
+Contains at least 8 characters
+Contains at least one uppercase letter
+Contains at least one lowercase letter
+Contains at least one digit
+Example:
+Input: "Passw0rd"
+Output: Strong password
+
+Sentence Capitalizer:
+Description: Write a program that capitalizes the first letter of each word in a given sentence.
+Example:
+Input: "hello world"
+Output: "Hello World"
+
+Word Frequency Counter:
+Description: Write a program that counts the frequency of each word in a given text.
+Example:
+Input: "Hello world. Hello Python. Python is awesome."
+Output: {'Hello': 2, 'world': 1, 'Python': 2, 'is': 1, 'awesome': 1}
+
+Anagram Checker:
+Description: Write a program that checks if two given strings are anagrams of each other.
+Example:
+Input: "listen", "silent"
+Output: True
+
+Matrix Transpose:
+Description: Write a program that calculates the transpose of a given matrix.
+Example:
+Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+
+Binary to Decimal Converter:
+Description: Write a program that converts a binary number to its decimal equivalent.
+Example:
+Input: "1010"
+Output: 10
+
+Caesar Cipher:
+Description: Write a program that encrypts a given string using the Caesar cipher technique.
+Example:
+Input: "Hello", shift=3
+Output: "Khoor"
+

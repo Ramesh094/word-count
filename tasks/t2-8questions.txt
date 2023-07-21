@@ -1,0 +1,179 @@
+1. Variables. Explain in detail?
+PYTHON VARIABLES:
+	Python Variables are containers that store values. In python a variable is created when assigning
+	a value to it. Variable is nothing but address of memory location of some value with name. In 
+	python you don't need to declare datatype of variable because it is dynamically typed. It 
+	defines the variable type at run time. while writing the variable names you should follow some
+	rules. Those are
+		1. Shouldn't start with any special chracter and number except  underscore( _ ) and letters.
+		2. Should contain alpha-numeric characters only.
+		3. Python reserved keywords shouldn't be used as an variable name.
+		4. Python variables are case sensitive i.e x and X are not same.
+ 
+2. Tokens in python 
+TOKENS:
+	Token is a smallest individual unit of program's source code. It can be a key word or operator 
+	identifier or punctuator. All the staments and instructions in a program are tokens. Tokens are
+	used by interpreter to analyze and  execute source code. 
+	1. KEYWORDS :
+		Key words are reserved words that have a special meaning and significance, those words are 
+		can't be used for anything except for the specific purposes. In python there are 33 key 
+		words are there, each keyword have a special feature.
+		ex: True, False, None, and, or, not, in, is, if, elif, else,  for, while, break, continue, 
+		def, class, as, pass, lambda, return, yield, import, from, try, finally, except, raise, 
+		assert, del, global, nolocal, async, await.
+	2. LITERALS or VALUES
+		literals or values are data items or fixed values used in source code. 
+		Different literals supported by python 
+		String literals				Examples
+			string literals 	--- name = "ramesh"
+			character literals 	--- chr  = 's'
+		Numeric literals	
+			integer literals    --- age  = 26
+			float literals 		--- price= 18000.00
+			complex literals	--- img  = 1+4j
+		Boolean literals
+			true/false     		--- x = 3 //True or x = 0 //False
+		liereals collections
+			list				--- ['ramesh', 'kumar', 'naresh', 'ramesh']
+			tiple				--- ('ramesh', 'kumar', 'naresh')
+			dict				--- {'name' : 'ramehs', 'age' : 26}
+			set					--- {1, 2, 3, 4}
+	3. CONSTANTS
+		The value of varaible which will not be chnaged at any cost. gravity, pye value etc...
+			ex:
+				pye = 3.14
+				earth_gravity = 9.8
+	4. IDENTIFIERS
+		Identifiers are the names to any variable or function or class for identification. Identifiers
+		should follow the same rules of variable declarations. Python is case sensitive here ram and 
+		Ram are not same identifiers.
+		Ex: ram_age = 26.
+	5. OPERATORS
+		The operators are resposible to perform some operations on variables. The variables on which
+		operation takes place are operands. The operators are two types. 
+		1. Unary operator : which acting on a single operand. 
+							ex: a = 12
+								b = ~a  
+								print(b)	 # -13
+		2. Binary operator : which acting on two operands.
+							ex: x = 25
+								y= 25
+								res = x + y
+								print(res) 	# 50
+
+3. Implicit casting vs Explicit casting 
+	In python data type casting is two types. 
+	1. IMPLICIT DATA TYPE CONVERSION:
+		In python, when the data type conversion is done during compilation or runtime, this 
+		conversion is called implicit data conversion. The user no need to involve in this process.
+			ex: age = 26
+				print(type(age)) # int
+		
+	2. EXPLICIT DATA TYPE CONVERSION:
+		In explicit data type conversion, the user should involve to convert one data type to another 
+		required data type while writing the code.
+			ex: x = 'VN'
+				y = 2  #implicit data type
+				y= str(y) #excplicitly converting data type
+				res = x+y 
+				print(res) #VN2 
+
+4. Type promotion 
+	In pyhton, Type promotion is when two different data types have to perform one operation in which 
+	any one variable datatype has to converted into same data type of other varaiable. Then only you
+	can perform the operation without type error. These type promotion will be done by pyhton itself.
+	ex: a = 22  
+		b = 3.3  
+		res = a * b	# here type of a is converted into float  then 22 * 3.3 = 72.6
+		print(res) #72.6 
+5. Explain about each function 
+	print()	: print function returns the specified message on the screen or standard output device.
+		ex: print("it is print function") #it is print function
+	type() 	: returns the type of an object.
+			ex: name = "ram"
+				print(type(nam)) #<class 'str'>
+	id()	: Returns the address of the specified object. 
+			ex: val = 20
+				print(id(val)) #29009908039
+	int()	: Converts the specified value in to integer.
+			ex: val = 20.5
+				print(int(val)) #20
+	float()	: Converts the specified value into float.
+			ex: val = 20
+				print(float(val)) #20.0
+	bool()	:  Returns true when specified value is true other wise false.
+			ex: val = 10
+				print(bool(val)) #true
+			ex: val = 0
+				print(bool(val)) #false
+	str()	: Converts the specified value into string. 
+			ex: val = 1
+				val = str(1)
+				print(type(val)) #<class 'string'>			
+	list()	: Returns a list object. which contains a sequence of items ordered and changeable allows
+				duplicates.
+			ex: name = "ramesh"
+				print(list(ram)) # ['r', 'a', 'm', 'e', 's', 'h']
+	tuple()	: Tuple functions create a tuple object. Items in tuple are ordered and unchangeble allows 
+				duplicates. 
+			ex: ex_tup = tuple((1,2,3,4))
+				print(ex_tup) # (1,2,3,4)
+	dict()	: Dictionary function creates a dictionary. A dictionary is a collection which is ordered,
+				changeable and indexed.
+			ex: ex_dict = dict(name = "ram", age = 26)
+				print(ex_dict) #{'name' : 'ram', 'age' : 26}
+	set()	: Set function creates a set. A set is unordered, unchangeble and not allow dupilcates.
+			ex: ex_set = set("ram", "naresh", "raju")
+				print(ex_set) # {'ram', 'raju', 'naresh'}
+				
+6. == vs is 
+	'==' is an equality operator which compares the two values and gives the result in boolean value.
+	i.e  returns true when two values are equal or false when two values are not equal.
+	ex: val_1 = 22
+		val_2 = 10
+		print(val_1 == val_2) #false
+		
+	"is" an identify operator, returns true if both the variables are same object.
+	ex: x = []
+		y = []
+		print(x is y) #false here x and y are looking to same but x and y are two different objects.
+		x = z
+		print(x is z) #True x and z are same objects.
+		
+7. Difference between and or operators. Any two realtime examples 
+	And and or operators are logical operators. Logical operators are used to evaluate conditional statements.
+	AND Operator: 
+		And operator returns true when both statements are true.
+		Ex: if i have to attend an exam i should have hall ticket and some travelling amount.
+			If i don't have any one of these i cann't attend the exam.
+			
+			hallticket = 'yes'
+			on_amount = 500
+			if hallticket and travel_amount :
+				print("i can  attend the exam")
+			else: 
+				print("i cann't attend the exam")
+				
+	OR operator:
+		Or operators returns true any on of the stetment is true.
+		Ex: go to second floor in a building. two ways to go 1. through steps.
+															 2. by using lift.
+            steps = "yes"
+			lift = ""
+			if steps or lift:
+				print("i reach second floor through steps")
+			else:
+				print("i am not reached")
+			
+			
+8. Keywords in python 
+	KEYWORDS :
+		Key words are reserved words that have a special meaning and significance, those words are 
+		can't be used for anything except for the specific purposes. In python there are 33 key 
+		words are there, each keyword have a special feature.
+		ex: True, False, None, and, or, not, in, is, if, elif, else,  for, while, break, continue, 
+		def, class, as, pass, lambda, return, yield, import, from, try, finally, except, raise, 
+		assert, del, global, nolocal, async, await.
+
+binary, octal, decimal, hexa decimal conversions.

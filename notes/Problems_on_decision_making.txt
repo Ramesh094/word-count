@@ -1,0 +1,112 @@
+Task: 1;Simple Conditional Statements
+Description: Ask students to write a Python program that takes an input from the user and determines if it is an even number or an odd number.
+
+Task:2; Multiple Conditional Statements
+Description: Have students create a program that prompts the user to enter their age. Based on the input, the program should display different messages according to the following conditions:
+
+If age is less than 18: "You are a minor."
+If age is between 18 and 65: "You are an adult."
+If age is 65 or older: "You are a senior citizen."
+
+Task:3 ; Nested Conditional Statements
+Description: In this task, students should develop a program that calculates the discount amount for a shopping cart based on the following conditions:
+
+If the total price is greater than or equal to $100, apply a 10% discount.
+If the total price is between $50 and $99.99, apply a 5% discount.
+If the total price is less than $50, no discount is applied.
+
+Task:4 ; Complex Decision Making
+Description: Ask students to create a program that simulates a simple quiz. The program should present a series of multiple-choice questions to the user and keep track of their score. At the end of the quiz, display the user's score as a percentage.
+
+Task:5; Decision Making with Loops
+Description: Have students create a program that generates a random number between 1 and 100. The user should guess the number, and the program should provide feedback on whether the guess is too high or too low. The program should continue until the user guesses the correct number.
+
+Task :6 ;Calculate the sum of three given numbers, if the values are equal then return thrice of their sum
+
+Task : 7:  Python program to test whether a number is within 100 of 1000 or 2000.
+
+Task : 8 ; Python program to count the number 4 in a given list.
+
+Task : 9 ; Python program to test whether a passed letter is a vowel or not.
+
+
+Task 10: Voting Eligibility
+Description: Write a program that prompts the user to enter their age and determines if they are eligible to vote or not.
+Example Input: 21
+Example Output: "You are eligible to vote."
+
+Task 11: Leap Year Checker
+Description: Create a program that checks if a given year is a leap year or not.
+Example Input: 2024
+Example Output: "2024 is a leap year."
+
+Task 12: Grade Calculator
+Description: Develop a program that accepts a student's score as input and returns their corresponding grade according to a grading scale.
+Example Input: 87
+Example Output: "Your grade is B."
+
+Task 13: BMI Calculator
+Description: Create a program that calculates a person's Body Mass Index (BMI) based on their height and weight.
+Example Input: Height = 1.75m, Weight = 68kg
+Example Output: "Your BMI is 22.2."
+
+Task 14: Data Validation
+Description: Develop a program that validates user input to ensure it meets specific criteria (e.g., length, format).
+Example Input: "abc123"
+Example Output: "The input is valid."
+
+Task 15: Temperature Converter
+Description: Write a program that converts a given temperature from Celsius to Fahrenheit or vice versa.
+Example Input: 32°F
+Example Output: "0°C"
+
+Task 16: User Authentication
+Description: Create a program that verifies a user's login credentials (e.g., username and password).
+Example Input: Username = "john_doe", Password = "pass123"
+Example Output: "Login successful."
+
+Task 17: String Manipulation
+Description: Develop a program that performs different operations on a given string based on user input (e.g., length, reverse, uppercase).
+Example Input: "Hello, World!"
+Example Output: "The string has 13 characters."
+
+Task 18: Discount Calculator
+Description: Create a program that calculates the final price of a product after applying a discount.
+Example Input: Original price = $100, Discount percentage = 20%
+Example Output: "The final price is $80."
+
+Task 19: Email Validation
+Description: Create a program that validates if a given email address is correctly formatted.
+Example Input: "john.doe@example.com"
+Example Output: "The email address is valid."
+
+Task 20: Number System Converter
+Description: Develop a program that converts a given number from one number system to another (e.g., binary to decimal).
+Example Input: Binary number = "10101"
+Example Output: "The decimal equivalent is 21."
+
+Task 21: Rock, Paper, Scissors Game
+Description: Write a program that allows two players to play the classic game of rock, paper, scissors and determines the winner.
+Example Input: Player 1: "rock", Player 2: "scissors"
+Example Output: "Player 1 wins!"
+
+Task 22: Currency Converter
+Description: Create a program that converts an amount of money from one currency to another based on current exchange rates.
+Example Input: Amount = $100, Currency = USD to EUR
+Example Output: "The converted amount is €85.62."
+
+Task 23: Password Strength Checker
+Description: Develop a program that evaluates the strength of a user's password based on certain criteria (e.g., length, complexity).
+Example Input: "Pa$$w0rd"
+Example Output: "The password is strong."
+
+Task 24: Error Handling
+Description: Write a program that handles different types of errors and displays appropriate error messages to the user.
+Example Input: "5" (when expecting an integer)
+Example Output: "Invalid input. Please enter a valid integer."
+
+Task 25: Game Character Decision-Making
+Description: Create a program that simulates decision-making for a game character based on different scenarios (e.g., fight or flee, choose a weapon).
+Example Input: Scenario = "Encounter enemy"
+Example Output: "You decide to fight the enemy."
+

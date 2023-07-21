@@ -1,0 +1,1315 @@
+PYTHON
+Python is a programming language. it was created by Guido van Rossum and it was released in 1991.
+
+Used For
+# web developmet // on a server to create web applications.
+# software development // software to work flows.
+# mathematics // to handle  big data and complex mathematics.
+# system scripting // production ready software development.
+ 
+Why
+# works on different platforms.
+# simple syntax.
+# fewer lines compared to other languages.
+# python runs on an interpreter system  meaning that code can be executed as soon as it is written. This means that prototyping      can be very quick.
+# Python can be treated in a procedural way, an object-oriented way or a functional way.
+
+>>to run python in cmd line directly there itself C:\Users\Your Name>python/py and you can do some mathematic operations and programmes at cmd prompt. exit() to exit from the python command line interface.
+
+python indentation is referes to spaces at the beginning of a code line, in python indentation is important and in other languages indentaion is for readability here pyhton uses indentation to indicate a block of code.
+Ex: 
+if 5>2:
+    print("five is greater than two") //five is greater than two
+
+python variables: varaiables are containeras to store  data values.
+variables are created when you assign a value to it. python has no command for declaring a variable.
+ex: x=5 // x is am variable and 5 is its data value.
+
+Casting:
+casting is nothing but  specifying data type of varaible when it id created.
+x=str(3) / x= "3" / x='3'
+y= int(3)
+print(type(x)) //3 is a string <class 'str'>
+print(type(y) // 3 is a integer(number) <class 'int'>
+print(Y) // NameError: name 'Y' is not defined {python variables are case sensitive i.e y and Y are different variables}
+
+varaiable names more than one word are written using different casing types those are
+1. camelCase: each word except first word start with capital letter // rameshKumarMamillapalli.
+2. PascalCase: each word starts with capital letter // RameshKumarMamillapalli.
+3. Snake_case: each word is seperated with under score( _ ) character.
+
+python allows you to assign values to multiple variables in one line. 
+x, y, z  = "ram", "naresh", "chilaka"
+print(x,y,z) // ram naresh chilaka {you can also print multiple variables at one time like assigning multiple variables}
+you can also assign one value to multiple varaibles
+x = y = z = 'friends'
+print(x) // friends
+print(y) // friends
+print(z) // friends 
+
+Unpacking a collection:
+if you have a  collection of values in a list, tuple etc, python allows you to extract the values into varaibles. this is called unpacking.
+friends = ["ram", ' naresh ', 'chilaka']
+x, y, z = friends
+print(x,y,z) // ram naresh chilaka
+The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types
+
+Global varaibles:
+variables which are created outsude of a function are known as global varaibles, these variables can be accessd globally i.e from inside of a function or outside of  a function.
+example-1:
+def myfunc():
+    x="ramesh kumar"
+    print("my name is  " + x)  // x is global variable accessed from  outside of function 
+myfunc() // my name is ramesh kumar
+
+example-2:  for combination of global and local variable
+x = 'ram'
+def myfunc():
+    x="ramesh"
+    print("my full name is " + x) // here x is local varaible 
+myfunc()
+print("my nick name is " + x) // here  x is global variable
+
+creating a global variable with in the function by using keyword "global":
+example:
+x="ram"
+def myfunc():
+    global x
+   x= "ramesh"
+myfunc()
+print("python is " + x) // x is with in the function but it is global variable because of global keyword is used to make global.
+//python is ramesh
+example: 
+x = 'ram'
+def myfunc():
+   global x
+   x = "ramesh"
+myfunc()
+print("my name is  " + x) // my name is ramesh // {global variable value can be accessed by using global key word with in the function}
+
+Different data types:
+variables can store data  of different types and different types can do different things. following data types are 
+text  type              -- str
+numric types        -- int, float, complex
+sequence types    -- list, tuple, range
+mapping type      -- dict
+set types              -- set, frozenset
+boolean type       -- bool
+binary types         -- bytes, bytearray, memoryview
+none type            -- noneType
+
+to get the data type of any object we use type( ) function
+ex : x = "ram"
+      print(type(x))   //<class 'str'>
+
+Setting Data Type:
+python numbers :
+int : integer is a whole  number  positive or negative without decimals of unlimited lemgth. // 5, 555, 66666
+float : is a number positive or negative containing one or more decimals. // 2.0 // 2.1111
+complex : complex numbers are written with a "j" as the imaginary part. //  1+5j/ 1j/ -5j
+here type conversion can use to convert one number type to another number type i.e float--int, int--float, float--complex, int--complex but you cann't convert complex numbers into another number type.
+You can't convert any string to numeric type but you can convert number type to string
+
+Random number:
+Python does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers:
+example:
+import random
+print(random.randrange(1, 10)) //it gives a random number between 1-10.
+
+Python Casting:
+python casting is done by construction functiona
+int()--constructs  an integer number from literals of integer, float, string. 
+float()--constructs an float number from literals of integer, float, string.
+str() -- constructs a string from variety of dta types and  literals of integer, float, string.
+Literals or constants are the values we write in a conventional form whose value is obvious
+
+Python Strings: 
+python strings are surrounded by single/ double quotes. // "ram" / 'ram'
+To assign a multiline string to a variable by using three quotes.
+ex: x = """my name 
+is ramesh kumar
+mamillapalli"""
+print(x) //{ my name
+ is ramesh kumar
+ mamillapalli} // we can use three single quotes{''' '''} line breaks are inserted at the same position as in the code.
+
+Strings are arrays:
+square brackets are used to accessed elements of the string.
+ex: x = "ramesh"
+print(x(1)) // a  {python follows zero index method}
+
+looping through string:
+for x in "ramesh"
+    print(x)
+// r
+a
+m
+e
+s
+h  { loop through the letters in the word "ramesh" and output comes one letter on one line}
+
+String Length:
+len() function is used to get the length of the string.
+x= "ramesh"
+print(len(x)) // 6 {it starts count from 1 i.e not follows the zero indexing method}
+
+check string
+to check a certain phrase/ character is present in a string we can use the keyword in
+ex: name = 'ramesh kumar'
+print("ram" in name) // true {when cheking a string the output will be boolean type}
+
+ex: txt = "The best things in life are free!"
+if "free" in txt:
+  print("Yes, 'free' is present.") // Yes, 'free' is present.
+
+Check if NOT:
+To check if a certain phrase or character is not present in a string  we use keyword not in.
+name = "ramesh kumar"
+print("naresh" not in name) // true
+
+ex: name = "ramesh kumar"
+if "naresh" not in name:
+     print("No, naresh is not the actual name")// No, naresh is not the actual name.
+
+Slicing string:
+By using slicing syntax we can return a range of characters.
+ex: name = "ramesh kumar"
+print(name[0:3]) // ram
+slice from start : print(name[:3] // ram
+slice to end : print(name[3:]) // esh kumar
+Use negative indexes to start the slice from the end of the string : print(name[-5:]) // kumar
+
+Modify Strings:
+name = " Ramesh Kumar "
+upper(): to return string in upper case-- print(name.upper()) //RAMESH KUMAR
+lower(): to return string to lower case -- print(name.;lower()) // ramesh kumar
+strip(): to remove white at the start and end -- print(name.strip()) // Ramesh Kumar 
+replace(): to replace a string with another string -- print(name.replace("m", "n")) // Ranesh Kunar
+split(): it returns a list where the text between the specified seperator becomes the list items -- print(name.split(" ")) // [' ', 'Ramesh', ' ', 'Kumar']   // and split method splits the string into substrings if it finds instances of the seperator.
+
+String concatenation: 
+To combine two strings you can use '+' operatior. 
+ex: a="ramesh"
+b="kumar"
+print(a+b) // rameshkumar
+print(a+" "+b) // ramesh kumar --to add space
+we cann't combine different data types, we can only make  string concetenation of similar data types. like str--str, int--int,etc
+but we can combine strings   and numbers by using format() method.
+The format method takes the passed arguments, formats them, and places them in the string where the placeholders {} are:
+ex: age=26
+txt = "my name is ram, ands I am {}"
+print(txt.format(age) // my name is ram, ands I am 26
+ex: for more no of arguments and placeholders 
+name = "ramesh"
+town = "samanasa"
+distance = 1100 
+details = "my name is {} and i a from {} and it is {} km from here"
+print(details.format(name, town, distance)) //my name is ramesh and i a from samanasa and it is 1100 km from here
+ex: 
+course = "python"
+price =30000
+version = 3.0
+learning = "i want to learn {2} of {0] version at cost of {1}"
+print(learning.format(version, price, course)) // i want to learn python of 3.0 version at cost of 30000
+
+Escape character: 
+if you are trying to use double quotes in a string where it is surrounded by double quotes gives an error, to overcome this use escape character " \ ".
+add = " my father name is narayana murthy \"abbulu\""
+print(add) // my father name is narayana murthy "abbulu"
+
+other escape characters used in python:
+single quote-- \'
+ex: txt= "it\'s my birthday"
+     prin(txt) // it's my birthday -- adds single quote
+black slash-- \\
+ex: txt = "is 11\\04\\1997"
+     print(txt) //  is 11\04\1997  -- to add single back slash
+new line -- \n
+ex: txt = "ramesh\nkumar"
+     print(txt) // ramesh 
+                        kumar -- started from new line
+carriage return -- \r
+ex: txt = "ramesh\rkumar"
+     print(txt) // ramesh 
+                        kumar -- started from new line
+
+tab -- \t
+ex: txt = "ramesh\tkumar"
+     print(txt) // ramesh    kumar --tab space
+backspace -- \b
+ex: txt = "ramesh \bkumar"
+     print(txt) -- rameshkumar
+form feed -- \f
+octal value -- \ooo
+ex: txt = "\110\145\154\154\157"
+      print(txt) // Hello 
+hex value -- \xhh 
+ex: txt = "\x48\x65\x6c\x6c\x6f"
+      print(txt) // Hello
+
+Boolean Valuea:
+When you compare two values, the expression is evaluated and Python returns the Boolean answer:
+ex: print(9>10) // False
+when you run a condition in an if statement, python returns True or False:
+ex: a= 200
+b= 100
+if b>a:
+    print("b is greater than a")
+else:
+    print("b is not greater than a" 
+// b is greater than a
+
+The bool() function allows you to evaluate any value and give you True or False in return
+print(bool("hello") // True
+x= ""
+print(bool(x) // False
+y=1
+print(bool(y)) // True
+y=0
+print(bool(y)) // False
+Any list, tuple, set, and dictionary are True, except empty ones
+In fact, there are not many values that evaluate to False, except empty values, such as (), [], {}, "", the number 0, and the value None. And of course the value False evaluates to False.
+
+Function can return a boolean:
+ex: def myfunction():
+    return True
+print(myfunction()) // True
+
+ex-2:
+def myfunction():
+     return True
+if myfunction():
+    print("Yes!")
+else: 
+   print("No!") // Yes!
+isinstance() method:
+ which can be used to determine if an object is of a certain data type:
+ex: x=200
+print(isinstance(x, int))  // True
+
+Python Operators:
+Arithmetic operators --[+,  -, *,  /,  %,  **,  //]
+Assigning operators  -- assignment operators are used to assign values to variables
+   =      x=5         x=5 // is eqaul
+   =+   x+=3       x=x+3 //addition
+   -=    x-=3        x= x-3 // subtraction
+   *=    x*=3        x=x*3 //multiplication
+   /=    x/=3        x= x/3 //division
+   %=  x%=3       x=x%3 // modulus
+   //=  x//=3       x=x//3  //floor division
+  **=   x**=3       x=x**3 //exponentiation
+  &=   x&=3       x=x&3  //and 
+  |=     x|=3         x=x|3  // or
+  ^=   x^=3        x=x^3 //xor
+  >>= x>>=3     x=>>3  //bitwise right shift
+  <<= x<<=3    x=x<<3 //bitwise left shift
+comparison  operator: used to compare two values
+   ==   equal
+   !=    not equal
+   >     greater than
+   <      less than
+   >= greater than or equal to
+   <= less than or equal to
+python logical operator : logical operators are used to combine conditional statements.
+and -- returns true if both statements are true
+ex:1
+x = 5
+print(x>3 and x<10) #True
+ex:2
+x=1
+print(x>3 and x<10)#False
+
+or -- returns true one of the condiotns are true.
+ex:1
+x= "ram"
+y = type(x)
+z= len(x)
+print( z==3 or y==int)#True
+print(z==3 or y==str)#False
+
+not -- reverses the result , returns flase if the result is true and vice versa.
+ex:
+x= "ram"
+y = "rod"
+z= len(x)
+print(not(x ==y and  z==3))#True
+print(not(x==y or z==3))#False
+
+Python Identify Operators:
+Identify operators are used to compare the objects, not if they are equal, but if they are actually the same object with the same memory location.
+1. is operator: returns True if both the  variables are the same object.
+ex:
+x= ["ramesh", "naresh"]
+y= ["ramesh", "naresh"]
+z=x
+print(x is y)#False  // here are not same objects , their content is same
+print(x is z)#True //here bothe are same objects
+2. is not operator: returns true if both varaibles are not same object.
+ex:
+print(x is not y)#true
+print(x is not z)#False
+
+Python membership operators:
+Membership operators are used to test if a sequence is presented in an object.
+1. in operator:
+ returns true if value is specified in the object.
+ex:
+x = ["ramesh", "kumar"]
+print("kumar" in x) #True  
+print("ram" in x) #False 
+2. not in operator:
+returns true when value is not in the object.
+ex:
+x= ['ramesh', 'kumar']
+print('ram' not in x) #True
+print('ramesh' not in x)#False
+
+Python Bitwise operators:
+bitwise operators are used to compare binary numbers
+&(AND): sets each bit to 1 if both bits are 1.
+ex:
+print(6 & 3)#2
+6 = 110 
+3 = 011
+2  = 020 //opt
+ex:2
+print(4 & 7) #4
+4 = 0100
+7 = 0111
+4 = 0100 //opt
+
+|(or): sets each bit to 1 if one of two bits is 1.
+ex1:
+print(11&20) #31
+11 = 01011
+20 = 10100
+31 = 11111
+
+^(xor): sets each bit to 1 if only one bit is 1.
+ex1:
+print(5 ^ 8) #13
+5   = 0101
+8   = 1000
+13 = 1101
+
+~(not): Inverts all the bits 
+ex1:
+print(~ 16) #-17
+16  =  0000000000010000
+-17=  1111111111101111 
+ex2:
+print(~25) #-26
+25 =   0000000000011001
+-26=  1111111111100110
+
+<<(Zero fill left shift): shift left by pushing zeros from the right and ket the leftmost bits fall off.
+ex1:
+print(14 << 4): #224
+14      = 00001110
+224    = 11100000
+>>(signed right shift): Shift right by pushing  copies of the leftmost bit in from the left andlet the rightmost bits fall off.
+ex1:
+print(14 >>2) #3
+14   =  00001110
+3     =  00000011
+
+
+start
+print(8 >> 4 - 2)
+"""
+Bitwise right shift has a lower precedence than subtraction, and we need to calculate the subtraction first.
+The calculation above reads 8 >> 2 = 2
+
+More explanation:
+The >> operator moves each bit the specified number of times to the right. Empty holes at the left are filled with 0's.
+
+If you move each bit 2 times to the right, 8 becomes 2:
+ 8 = 0000000000001000
+becomes
+ 2 = 0000000000000010
+
+Decimal numbers and their binary values:
+
+ 0 = 0000000000000000        
+ 1 = 0000000000000001        
+ 2 = 0000000000000010
+ 3 = 0000000000000011
+ 4 = 0000000000000100
+ 5 = 0000000000000101
+ 6 = 0000000000000110
+ 7 = 0000000000000111
+ 8 = 0000000000001000
+ 9 = 0000000000001001
+10 = 0000000000001010
+11 = 0000000000001011
+12 = 0000000000001100
+  <<= x<<=3     x=x<<3
+   end
+
+
+
+String Methods:
+count():
+x= "samanasa"
+print(x.count('a', 4, 8)) // 2
+print(x.count('a')) //4
+#string.count("value", start, end)
+capitalize():
+x="Ramesh Kumar"
+y= x.capitalize()
+print(y) // Ramesh kumar
+#it makes first character to capital letter of the string.
+casefold():
+x="Ramesh Kumar"
+print(x.casefold()) // ramesh kumar
+#it makes the alll characters to smaller case.
+center():
+x='ramesh'
+print(x.center(10,"@") //@@ramesh@@
+#the fill character must be one character lon
+#returns a  centered string with the specified character
+endswith():
+x = "ramesh kumar"
+print(x.endswith("r")) // true
+print(x.endswith(" ")) // true #returns true while argument is empty  quotes
+print(x.endswith("z"))  // false
+#type  error // endswith argument takes atleast one character.
+expandtabs():
+x="ramesh"
+print(x.expandtabs())// r	a	m	e	s	h
+print(x.expandtabs(2)) // r a m e s h
+print(x.expandtabs(4)) //r   a   m   e   s   h
+#tab default size is 8 character length
+
+find(): string.find(value, start, end) //start and end values are optional
+ method finds the first occurence of the specified value. it returns -1 if  it is not found the specified value.
+x='samanasa'
+print(x.find('am')) //1 
+print(x.find('z') // -1 {returns -1 if  it not found the specified value}
+print(x.find('na')// 4
+ex:
+name = "ramesh kumar"
+x= name.find("e", 2,12) 
+y= name.index("z",2,12)
+print(x,y) // In index method  it gives ""value error: substring not found"" if it is not found the value
+#find( ) and indexI( ) methods both are similar only one difference is find method returns -1 if value is not found where index method gives an excemption i,.e value error: substring is not found
+format() :  string.format(value1, value2)
+x= "my name is {1} and my  age is {0}".format(26, "ramesh")
+y= "my height is {} and weight is {}".format(5.7 , 65)
+z = "my car is {color} and model is {year}".format(color ="black", year=2018)
+print(x) //my name is ramesh and my  age is 26
+print(y)my height is 5.7 and weight is 65
+print(z) //my car is black and model is 2018
+
+isalnum( ):
+ex:
+x = "ramesh094"
+y="ramesh@094"
+print(x.isalnum()) // true
+print(y.isalnum()) //false
+##returns true if all the characters  in between 0-9 and  a-z, otherwise returns false {even space is considerd as non alpha numeric character}
+isalpha():
+ex:
+x="ram"
+y= "ram094"
+print(x.isalpha( )) //true
+print(y.isalpha( )) //false
+##returns true if all the characters are alphabets(a-z) otherwise returns false
+isdecimal( ): returns true  only when all the characters in the string are decimal.
+ex:
+x= "1234"
+y="\u0047"
+print(x.isdecimal()) //true
+print(y.isdecimal())//false
+isascii( ): American Standard Code For Information Interchange(ASCII) (128 characters) 
+48-57 ==0-9 numbers
+65-90 == A-Z capital letters 
+97-122 == a-z smaller case
+The assciii method returns true if all characters are ascii characters(a-z).
+x='ram094'
+print(x.isascii()) //true
+isdigit( ):
+ex:
+x='1234'
+print(x.isdigit( )) //true
+y= '1234.0'
+print(y.isdigit( )) // false
+you can also perform this methods on unicode characters.
+x= "\u0030"
+print(x.isdigit()) //true
+isidentifier( ):
+ returns true for valid identifier  otherwise false.
+A valid identifier means it should contains characters in between a-z or 0-9 or underscore( _ ). A valid identifier cann't start with a number or cann't contain any spaces.
+EX:
+x= "ramehs094"
+y="0ramesh 94"
+print(x.isidentifier()) // true
+print(y.isidentifier()) //false
+islower( ):
+EX:
+x='ramesh 094'
+y='RamesH 094' 
+pritn(x.islower())//true
+pritn(y.islower())//false
+isnumeric( ):
+ returns true when all the characters are numbers(0-9) 
+EX:
+x= "r1234"
+y="-1"
+z="1.0"
+o="1234"
+print(x.isnumeric())#false
+print(y.isnumeric())#false
+print(z.isnumeric())#false
+print(o.isnumeric())#true
+
+isprintable( ):
+returns true if all characters in the string are printable otherwise false i.e while using escape characters it returns false.
+EX:
+x= "hello\nworld"
+y= "hello world"
+print(x.isprintable())#false
+print(y.isprintable())#true
+isspace( ):
+if  the string contains only one or more spaces it returns true otherwise it returns false i.e would be a single character or an empty string  
+EX:
+x=""
+y="     "
+z= "s     "
+print(x.isspace())#false
+print(y.isspace())#true
+print(z.isspace())#false
+istitle( ): returns true if the every word first letter is capital and remaining letters are smaller case otherwise false i.e it ignores numbers and symbols.
+ex:
+x="ramesh kumar"
+y= "1 Mamillapalli Ramesh Kumar"
+z="Mamillapalli RameSh KuMar"
+print(x.istitle())#true
+print(y.istitle())#false
+print(z.istitle())#false
+
+isupper( ): returns true if all alphabet characters are capitals it ignores numbers, symbols, and spaces.
+ex:
+x="1.RAMESH KUMAR"
+y="@rAMESH kumar"
+print(x.isupper())#true
+print(y.isupper())#false
+join( ): string.join(iterable)
+The join () method takes all items in an iterable and joins them into one string. A string must be specified as the  seperator.
+ex:
+mytuple=("ram", "chilaka", "naresh")
+print("@".join(mytuple))#ram@chilaka@naresh
+ex:
+mydict= {"name":"ram", "surname":"mamillapalli"}
+print("$".join(mydct))#name$surname
+ljust( ): string.ljust(length, character)
+The ljust() method will left align the string, using a specified character (space is default) as the fill character.
+ex:
+x="ramesh"
+print(x.ljust(10, "$")#ramesh$$$$
+ex:
+txt= "ram"
+y= txt.ljust(7,"*")
+print(y, "is my password")#ram****is my password
+
+lower( ): it converts all alpha chracters of string into lower case.
+ex:
+x="Ramesh Kumar"
+print(x.lower()) #ramesh kumar
+
+lstrip( ): remove spacdes to the left of the string
+ex:
+x="     ram      "
+print(x.lstrip()+ "is my nick name") #ram     is my nick name 
+ex:
+x=",-.$,2-.$$$94...--ram--$$..,,"
+y= x.lstrip(",.-$")
+print(y)#2-.$$$94...--ram--$$..,,
+
+maketrans( ): str.maketrans(x,y,z)
+returns a translation table to be   used in translations
+ex1:
+greet = "Hi ram"
+res = str.maketrans("m", "o")
+print(greet.translate(res)) #Hi rao
+ex2:
+greet = "hi, this is abc"
+x= "cba"
+y= "mar"
+res = str.maketrans(x,y)
+print(greet.translate(res))#hi, this is ram
+
+ex3:
+greet = "hi this is abc"
+x="abc"
+y = "ram"
+z= "thisa"
+res = str.maketrans(x,y,z)
+print(greet.translate(res))#   am
+
+partition( ): string.partition(value)
+the partition( ) method searches for a specified string and splits the string into tiple containing three elements
+ex:
+text = "i learning python from w3schools"
+x= text.partition("python"
+print(x)#("i learning", "python", "from w3schools")
+ex: 
+txt="i am staying in pg near by brookfield"
+y= txt.partition("in pg")
+print(y) # ("i am staying", "in pg", "near by brookfield")
+
+replace( ): string.replace(oldvalue, newvalue, count)
+ex:
+x="this is zamesh kumaz"
+print(x.replace("z", 'r'))#this is ramesh kumar
+ex2:
+x="this is zamesh kumazzzz"
+print(x.replace("z","r",3)#this is ramesh kumarrzz
+
+rfind( ): string.rfind(value, start, end)
+last occurence in the given string if it not founds returns -1.
+ex:
+myname  ="my name is samanasa"
+print(myname.rfind("sa")) #17
+where  the text last occurence of the string 
+myname  ="my name is samanasa"
+print(myname.rfind("na",2,10 )) #3
+
+
+rindex( ):  also same like rfind()
+
+rjust( ): returns a right justified version of the string
+ex:
+x="ram"
+print(x.rjust(10,"$"))#$$$$$$$ram
+rpartition( ): string.rpartition(value)
+The  rpartition() method searches for the last occurence of a specified string and splits the string into a tuple containing three elements.
+ex:
+txt="i read english newspaper daily to improve my english communication"
+print(txt.rpartition("english"))#('i read english newspaper daily to improve my', 'english', 'communication')
+
+rsplit( ): string.rsplit(seperator, maxsplit)
+splits a string into a list starting from right.
+if no max is specified this method will return same as the split() method.
+ex:
+x= "ramesh, naresh ,chilaka"
+print(x.rsplit(" ")) #['ramesh,', 'naresh,', 'chilaka']
+ex:
+x="ramesh, naresh, chilaka"
+print(x..rsplit(",", 2))#['ramesh', 'naresh', 'chilaka']
+
+split( ): string.split(seperator, maxsplit)
+The split() method splits a  string into a list.
+you can specify the seperator, default seperator is any whitespace.
+ex:
+x= "my name is ramesh "
+print(x.split()) # ['my', 'name', 'is', 'ramesh']
+ex:
+print(x.split(" ",2))#['my', 'name', 'is ramesh']
+
+splitlines( ): string.splitlines(keeplinebreaks)
+ex:
+x= "splitniles method splits a string\n into list at line breaks"
+print(x.splitlines())#['splitlines method splits a string', 'into list at line breaks']
+
+startswith( ): string.startswith(value, start, end)
+returns true if string starts with specified value
+ex:
+x= "hi, hello"
+print(x.startswith('hi'))# true
+print(x.startswith('hl', 0, 15)) #false
+
+strip( ): string.strip( )
+ex:
+the strip method removes any leading and trailing characters.
+x="...,$$##ramesh*#$#$#$..--,"
+print(x.strip(".,#$*-"))#ramesh
+ex2:
+x= "       ramesh       "
+print(x.strip())#ramesh
+swapcase( ): string.swapcase( )
+swapcase( ) method makes lower case to upper case and upper case to lower case.
+ex:
+x= "mAMILLAPALLI rAMESH kUMAR"
+print(x.swapcase())#Mamillapalli Ramesh Kumar
+title( ): string.title( )
+title( ) method makes the each word fiest letter to upper case.
+ex:
+x="mAMILLAPALLI rAMESH kUMAR"
+print(x.tile())#Mamillapalli Ramesh Kumar
+
+translate( ):
+translate method requires either dictionary or a mapping table
+ex dict:
+mydict= {80 : 83}
+x = "Hello Pam"
+print(x.translate(mydict))# Hello Sam
+ex1 mapping table:
+text = "ozyzxzoz zyw"
+x = "owxyz"
+y= "spnma"
+j= "w"
+h="str.maketrans(x,y,j)
+print(text.translate(h)) #samanasa am
+ex2:
+code = "[ @#$%^& *()_+<>?~ ]"
+x ="python developer"
+z="@#$%^& *()_+<>?~"
+#y=" "
+res =str.maketrans(z,x)
+print(code.translate(res))#[ python developer ]
+upper( ): string.upper
+converting a string into upper case
+ex:
+xx = "ramesh kumar"
+print(xx.upper())#RAMESH KUMAR
+zfill( ): string.zfill(len)
+zfill method adds zeros at the begining of string until it reaches the specified length.
+ex:
+x = "chatgpt"
+print(x.zfill(12))#00000chatgpt
+ex:
+x= "art int"
+print(x.zfill(10))#000art int
+
+Python Boolean Values
+Booleans reoresents one of twi values : True or False.
+ex:
+print(10>9)#True
+print(10<9)#False
+bool( ):
+the bool( ) function allows you to evaluate any value and give true or flase 
+ex:
+print(bool(""ram"))#True
+print(bool())#False
+print(bool('')))#False
+print(bool({}))#False
+print(bool(()))#False
+
+isinstance( ):
+ex:1
+x= "200"
+print(x.isintance(x, str)) # True
+print(x.isinstance(x, int))#False
+
+Python List:
+===========
+Lists are used to store multiple values in one varaible.
+ex:
+mylist = ['ram', 'naresh', 'chilaka'] or [1, 2, 3, 4] or [True, False, False, True]
+list items  are ordered,  changable, and allow duplicate values. List items are indexed. i.e from 0.
+Ordered means the list items have a defined order and that order will not change. but you can add
+ items at the end of the list. By using list methods you can change order of items.
+	my_list = [1, 'ram', True, 30.5, ''] a list with stings, booleans, floats and integers.
+lists can be created using list() constructor:
+	new_list = list(('prasad', 'satwik', 'suresh', 'niranjan'))
+	print(new_list) #['prasad', 'satwik', 'suresh', 'niranjan']
+ list can contain one element.
+	single_ele_list = ['ramesh']
+	print(type(single_ele_list)) #<class 'list'>
+Access Lists:
+============
+List items can be accessed by their index number.
+	ex: ranks = [2, 5, 8, 10, 22, 55]
+		print(ranks[0]) # 2
+		print(ranks[1:4]) # [5,8,10]
+		print(ranks[-1:-4]) #[8, 10, 22]
+	ex: finding failed ones from results when know the passed candidates.
+		results = ['satwik', 'chandhru', 'manoj', 'hari', 'ramesh']
+		passed = ['satwik', 'manoj', 'hari']
+		failed = []
+		for i in results:
+			if i not in passed:
+				failed.append(i)
+		print(failed) #['chandhru', 'ramesh']
+				
+Change list items:		
+=================
+1. by using indexing:
+	ex: langs =['python', 'java', 'php', 'javascript', 'css', 'html', 'jquery', 'typescript']
+		langs[4:8] =[]
+		print(langs) #['python', 'java', 'php', 'javascript']
+2. By using insert() method:
+	ex: brands = ['puma', 'lee-cooper', 'vkc', 'walkmate']
+		brands.insert(6, 'htc') #adding
+		print(brands) #['puma', 'lee-cooper', 'vkc', 'walkmate', 'htc']
+		
+Add list items:
+==============
+1. 	By extend() method:
+	ex: ques = ['name', 'study', 'from']
+		anws = ['ramesh', 'b.tech', 'amalapuram']
+		ques.extend(anws)
+		print(ques) #['name', 'study', 'from', 'ramesh', 'b.tech', 'amalapuram']
+Removing or deleting elements:
+=============================
+1. Using remove():
+	ex: ranks = [222, 555, 777, 999]
+		ranks.remove(555)
+		print(ranks) #[222, 777, 999]
+		
+2. Using pop():
+	ex: cars = ['i20', 'creta', 'i20_active', 'ferrari']
+		cars.pop()
+		print(cars) #['i20', 'creta', 'i20_active'] # pop with out mentioning value of index
+		cars.pop(1)
+		print(cars) #['i20', 'i20_active'] #pop with reference index
+		
+3. Using del:
+	ex: mobiles = ['poco', 'mi', 'vivo', 'lava']
+		del mobiles[1] 
+		print(mobiles) #['poco', 'vivo', 'lava']
+		del mobiles #[] deletes all the elements and gives empty list
+		
+4. Using clear():
+	ex: fruits = ['bananana', 'grape', 'orange']
+		fruits.clear()
+		print(fruits) # [] deletes all the elements and gives empty list
+Loops lists:
+===========
+I)Prints the list items using different method
+1. for loop through a list:
+	print the items of the list using for loop:
+	Ex: languages = ['telugu', 'english', 'hindi', 'kannada']
+		for x in languages:
+			print(x)
+		output: telugu
+				english
+				hindi
+				kannada
+2. using range function
+	Ex: for z in range(len(languages)):
+			print(languages[z])
+		output: telugu
+				english
+				hindi
+				kannada
+3. using while loop:
+	Ex: i = 0
+		while i < len(languages):
+			print(languages[i])
+			i = i + 1
+		output: telugu
+				english
+				hindi
+				kannada
+
+Comprehensive list:
+==================
+Ex: without list comprehension:
+ fruits = ['bananana', 'grape', 'orange', 'cherry', 'gova', 'mango']
+	o_fruits = []
+	for f in fruits:
+		if "o" in f:
+			o_fruits.append(f)
+	print(o_fruits) #['orange', 'gova', 'mango']
+Ex: with list comprehension:
+	fruits = ['banana', 'grape', 'orange', 'cherry', 'gova', 'mango']
+	o_fruits = [f for f in fruits if "o" in f]
+###new_lsit = [expression for item in iterable if condition == True]###
+	
+Ex: make a new list which doesn't contain "a" letter.
+	fruits = ['bananna', 'grape', 'orange', 'cherry', 'gova', 'mango']
+	not_a = [ a for a in fruits if "a" not in a]
+	print(not_a) #['cherry']
+	
+Ex: make a new list accepting that are not cherry:
+	fruits =['bananana', 'grape', 'orange', 'cherry', 'gova', 'mango']
+	without_cherry = [che for che in fruits if che != 'cherry']
+	print(without_cherry) # ['bananana', 'grape', 'orange', 'gova', 'mango']
+
+#without cherry i want to print fruits list
+	fruits =['bananana', 'grape', 'orange', 'cherry', 'gova', 'mango']
+	without_cherry = [che for che in fruits if che != 'cherry']
+	print(without_cherry) # ['bananana', 'grape', 'orange', 'gova', 'mango']
+
+#write a program to print 'apple' instead of 'bananana' with remaining items using list comprehensive.
+	fruits_1 =['bananana', 'grape', 'orange', 'cherry', 'gova', 'mango']
+	altered = [litem if litem != "bananana" else "apple" for litem in fruits]
+	print(altered) #['apple', 'grape', 'orange', 'cherry', 'gova', 'mango']
+	
+#write a same name instead of list items:	
+	fruit_name = ['name' for name in fruits_1 ]
+	print(fruit_name) #['name', 'name', 'name', 'name', 'name', 'name']
+
+#make all list items case to uppercase:
+	upper_case = [AA.upper() for AA in fruits_1]
+	print(upper_case) #['APPLE', 'GRAPE', 'ORANGE', 'CHERRY', 'GOVA', 'MANGO']
+
+#make a list 0 to 3 using range :
+	print_3 = [n for n in range(len(fruits)) if n<4]
+	print(print_3) #[0, 1, 2, 3]
+	number = [x for x in range(10) if x<5]
+	print(number)	#[0, 1, 2, 3, 4]
+	
+sort():
+====== sort method() arranges the items of the list into alpha-numerical order. The default order 
+	is ascending order.
+Ex:	sorting on alpha characters
+	houses = ['duplex', 'building', 'mansion', 'villa', 'hut', 'bungalow', 'shed', 'farm house', 'palace']
+	houses.sort()
+	print(houses)##['building', 'bungalow', 'duplex', 'farm house', 'hut', 'mansion', 'palace', 'shed', 'villa']
+	houses.sort(reverse = True)
+	print(houses)##['villa', 'shed', 'palace', 'mansion', 'hut', 'farm house', 'duplex', 'bungalow', 'building']
+
+Ex: sorting numeric characters:
+	prices = [1, 15, 22, 5, 10, 40, 80, 150, 90]
+	prices.sort()
+	print(prices) #[1, 5, 10, 15, 22, 40, 80, 90, 150]
+	prices.sort(reverse = true)
+	print(prices) $[150, 90, 80, 40, 22, 15, 10, 5, 1]
+	
+Ex: sorting on alpha numeric, while performing this numbers should be written as string literal otherwise it 
+		gives a type error of str and int instances. Here sort method comparing the characters when we do
+		comparision of two values that both values should be in same data type.
+		
+	my_details = ['11', 'ramesh', '26', '6', 'Durga', 'Murthy', 'my sisters', 'nephews' '7']
+	my_details.sort()
+	print(my_details) #['11', '26', '6', '7', 'Durga', 'Murthy', 'my sisters, 'nephews', 'ramesh']
+	
+Ex: case in-sensitive sorting:
+	nephews = ['Srija', 'sivani', 'satwik', 'harsha', 'Sanvi', 'Srihan', 'grishmi']
+	nephews.sort(key = str.lower)
+	print(nephews) #['grishmi', 'harsha', 'Sanvi', 'satwik', 'shivani', 'Srihan', 'Srija']
+	
+Ex: sort the list based on how close the number is to 50.
+	nums = [22, 55, -11, -30, 65, 18, -90]
+	def near_10(n):
+		return abs(n-10)
+	nums.sort(key = near_10)
+	print(nums)  #[-11, 22, 18, -30, 55, 65, -90]
+	[or]
+	nums.sort()
+	print(nums) #[-90, -30, -11, 18, 22, 55, 65]
+
+reverse():
+=========
+	reverse method() reverses the order of the list items regardless of alphabetical order.
+Ex: reverse ordering of the list.
+	fruits_list = ['orange', 'kiwi', 'cherry', 'grape']
+	fruits_list.reverse()
+	print(fruits_list) #['grape', 'cherry', 'kiwi', 'orange']
+	
+Copy lists:
+=========
+1. Using by copy():
+	list1 = ['water', 'food', 'air', 'money']
+	list2 = list1.copy()
+	print(list1) #['water', 'food', 'air', 'money']
+	print(list2) #['water', 'food', 'air', 'money']
+	
+2. Using By list():
+	list3 = ['house', 'clothes', 'study']
+	list4 = list(list3)
+	print(list3) #['house', 'clothes', 'study']
+	print(list4) #['house', 'clothes', 'study']
+	
+Join lists:
+==========
+1. using by append():
+	alphabets = ['a', 'b', 'c', 'd', 'e', 'f']
+	numbers = [1, 2, 3, 4, 5, 6]
+	for i in range(len(numbers)):
+		alphabets.append(numbers[i])
+	print(alphabets)#['a', 'b', 'c', 'd', 'e', 'f', 1, 2, 3, 4, 5, 6]
+	[or]
+	alphabets.append(numbers)
+	print(alphabets) #['a', 'b', 'c', 'd', 'e', 'f', [1, 2, 3, 4, 5, 6]]
+	print(numbers) #[1, 2, 3, 4, 5, 6]
+	##it appends numbers list as seperate lsit item to alphabets list. ##
+	
+2. using by extend():
+	alphabets.extend(numbers)
+	print(alphabets)#['a', 'b', 'c', 'd', 'e', 'f', 1, 2, 3, 4, 5, 6]
+	print(numbers) #[1, 2, 3, 4, 5, 6]
+	
+3. using by addition operator +	: [list3 = list1 + list2]
+	alpha_num = alphabets + numbers
+	print(alpha_num) #['a', 'b', 'c', 'd', 'e', 'f', 1, 2, 3, 4, 5, 6]
+	print(numbers) #[1, 2, 3, 4, 5, 6]
+count():
+=======
+Ex: counts the specified item presents in the list.
+	list1 = ['ram', 'ramesh', 'ram', 'naresh', 'ram']
+	how_many = list1.count("ram")
+	print(how_many) #3 
+	
+index():
+======
+Ex: to find index position of a specified value from lsit
+	list1 = ['ram', 'ramesh', 'ram', 'naresh', 'ram']
+	position = list1.index("ram") #0
+	
+List Methods:
+============
+1. append(): list.append(element) ##to add the elements
+2. extend(): list.extend(element) ##to add the elements
+3. pop(): list.pop(position) | list.pop() ## remove the specified position element
+4. remove(): list.remove(element) ## removes the first element with specified value
+5. clear(): list.clear() ## removes the all elements from the list
+6. copy(): list.copy()  ## returns a copy of the list
+7. insert(): list.insert(position, value) ##adds the element at specified position 
+8. index(): list.index(vlaue) ## returns the index position of specified element
+9. count(): list.count(value) ##returns the count of specified element
+10. reverse(): list.reverse() ##returns a reversed list
+11. sort(): list.sort(reverse = True|False)| list.sort() | list.sort(key = mufunction)
+	## returns the list in alpha-numerical order 
+
+Python tuple:
+============
+Tuples are used to store multiple values in one variable.
+Tuples is a collection of data which is ordered, changeable and allow duplicate values.
+Tuples are written with round brackets can contain any data type of values.	
+ex: my_tuple = ("ram", 26, True, 5.7)
+
+single element tuple:
+To create one item tuple, you have to add 	comma(,) after the element to know pyhton it is a tuple.
+Ex: sin_el_tuple = ('ramesh',)
+	print(type(sin_el_tuple)) ##<class 'tuple'>
+	
+	#if you don't put comma(,) python treats it's as a string.
+Ex: sin_el_tuple = ('ramesh')
+	print(type(sin_el_tuple)) ##<class 'str'>
+	
+creating a tuple using tuple constructor:
+========================================
+Ex: mylist = ['w3schools', 'greekforgreeks', 'programiz', 'hakerrank']
+	mytuple = tuple(mylist)
+	print(mytuple) #('w3schools', 'greekforgreeks', 'programiz', 'hakerrank')
+	
+Accessing tuples:
+================
+using indexes :
+Ex: my_tuple = ('w3schools', 'greekforgreeks', 'programiz', 'hakerrank')
+	sec_ele = my_tuple[1]
+	print(sec_ele) # greekforgreeks
+	two_eles = my_tuple[0:2]
+	print(two_eles) #('w3schools', 'greekforgreeks')
+	last_two = my_tuple[-2:]
+	print(last_two) #('programiz', 'hakerrank')
+	last_ele = my_tuple[-1]
+	print(last_ele) ##hakerrank     ##string
+	last_one_ele = my_tuple[-1:]
+	print(last_one_ele) #('hakerrank',)
+	
+Updating tuple: 
+==============
+1. you can add tuple to a tuple :
+Ex: tuple_1 = ('html', 'css', 'js')
+	tuple_2 = ('python', 'mysql')
+	tuple1 += tuple2
+	print(tuple_1, tuple_2) #('html', 'css', 'js', 'python', 'mysql') ('pyhton', 'mysql')
+
+2. 	you can add single element tuple to a tuple. ##but you have to add  comma(,) after for element.
+Ex: my_activity = ('start', 'walk', 'directions', 'steps')
+	destination = ('ferilion',)
+	reached = myactivity + destination
+	print(reached) #('start', 'walk','directions', 'steps', 'ferilion')
+	
+3. you can delete the tuple : 	
+Ex: tuple_3 = ('html', 'css', 'js')
+	del tuple_3
+	print(tuple_3) #NAME error because tuple_3 variable got deleted previous line.
+	
+###you can append and remove elements to a tuple but you cann't do it directly, you have to convert into 
+	list and then use append and remove methods and then convert the list to tuple.
+1. appending elements to a tuple.
+Ex: reg_games = ('cricket', 'volleyball', 'badminton')
+	games = list(reg_games)
+	games.append('football')
+	reg_games = tuple(games)
+	print(reg_games) #('cricket', 'volleyball', 'badminton', 'football')
+	print(games) #['cricket', 'volleyball', 'badminton', 'football']
+	
+Ex: ten_fr = ('ram', 'hari', 'mani', 'jaggu', 'adr', 'naresh')
+	ten_fr = list(ten_fr)
+	ten_fr.append('rajesh')
+	ten_fr = tuple(ten_fr)
+	print(ten_fr) #('ram', 'hari', 'mani', 'adr', 'naresh')
+
+Ex: ##changing a indexed element with new element.##
+	ranks = (1, 15, 45)	
+	y = list(ranks)
+	y[2] = 30
+	x = tuple(y)
+	print('updated tuple',x)
+	
+2. remove elements from a tuple.
+Ex: trainings = ('python', 'data_Eng', 'vm_ware', 'SAP', 'devops')
+	up_trainings = list(trainings)
+	up_trainings.remove('devops')
+	updated = tuple(up_trainings)
+	print(updated)#('python', 'data_Eng', 'vm_ware', 'SAP')
+	print(up_trainings)#['python', 'data_Eng', 'vm_ware', 'SAP']
+
+Packing and unpacking of tuples:
+Ex: my_foods = ('birayni', 'dosa', 'sweet') #creating a tuple and giving values to it is called as packing a tuple.
+	(lunch, tiffin, snack) = my_foods
+	print(lunch) #biryani
+	print(tiffin) #dosa
+	print(snack) #sweet
+	##Assigning different variables to values of a tuple is called 'unpacking' of a tuple.
+	
+Ex: my_foods2 = ('biryani', 'fish fry', 'idly', 'dosa', 'sweet', 'hot')
+	(lunch, fry, *tiffin, snacks) = my_foods2
+	print(lunch, fry, tiffin, snacks) # biryani fish fry ['idly', 'dosa', 'sweet'] hot 
+Ex2: (*lunch, tiffin, snacks) = my_foods2
+	print(lunch, tiffin, snacks, sep='\n')# ['biryani', 'fish fry', 'idly', 'dosa']
+											sweet
+											hot
+											
+	##If no of variables are less than no of values you should use *(asterisk) with variables name 
+		which will assign excess values to that variables as a list. ##
+loop tuples:
+1. iterating through tuple items
+	ex: my_tuple = ('mother', 'father', 'sisters')
+		for imp in my_tiple:
+			print(imp)	# mother
+						  father
+						  sisters
+2. getting the same output using range and len functions over a tuple
+	ex: for imp in range(len(my_tuple))
+			print(imp) 
+
+3. iterating through the tuple using while loop:
+	ex: my_tuple = ('mother', 'father', 'sisters')
+		imp = 0
+		while imp < len(my_tuple):
+			print(my_tuple[imp]
+			i +=1
+Join tuples:
+===========
+1. join two tuples
+Ex: my_tuple = ('mother', 'father', 'sister')
+	names = ('durga', 'murthy', 'all')
+	my_world = my_tuple + names 
+	print(my_world) #('mother', 'father', 'sister', 'durga', 'murthy', 'all')
+	
+2. Multiply tuples gives mutiple  times of values of a tuple as specified number.
+Ex: my_tuple = ('mother', 'father', 'sisters')
+	double = my_tuple * 2
+	print(double)#('mother', 'father', 'sisters', 'mother', 'father', 'sisters')
+	thrible = my_tuple * 3 
+	print(thrible) #('mother', 'father', 'sisters', 'mother', 'father', 'sisters', 'mother', 'father', 'sisters')
+	
+Tuple built in methods:
+======================
+1. count(): returns the how many times the specified value presents in a tuple.
+EX: my_tuple = ('mother', 'father', 'sisters', 'friends', 'mother')
+	cc1 = my_tuple.count('father')
+	print(cc1) #1
+	cc2 = my_tuple.count('mother')
+	print(cc2) #2
+	cc3 = my_tuple.count('sir')
+	print(cc3) #0
+	cc4 = my_tuple.count()
+	print(cc4) # typeError : count takes exactly one argument.
+	
+2. index(): returns the position of the specified element
+EX: my_tuple = (1, 2, 3, 4)
+	find1 = mY_tuple.index(1)
+	print(find1) #0 ## 1 value at zero index
+	find99 = my_tuple.index(99)
+	print(find99) # Value Error tuple.index(x): x is not in tuple
+
+Python Sets:
+===========
+Pyhton sets are unordered, unchangeable and not allow duplicate values.
+Sets gives random order of items whenever you accssing it.
+Sets can be used to remove duplicate values of a collection of data.
+##In sets True and 1 are same, if it has these two values it consider only one value either True or 1.
+same like that 0 and False are same in sets.
+##whenever you print sets it prints numbers in order at first and string values are in random order after numbers.	
+$$once a set is created you cann't change items but you can add items.
+
+ex: myset = {"python", 1, 2, 'syntax', True, 0 , False}
+	print(myset) 
+Accessing python with for loops:
+================================
+Ex. my_set = {'ram', 'ramesh', 'kumar'}	
+	for z in my_set:
+		print(z)							
+	##ram
+	  ramesh
+	  kumar
+	  
+Ex: print('ram' in my_set)#True
+
+Adding items to set:
+===================
+1. add(): add method is used when one item is adding to set.
+esse = {'chair', 'desk', 'fan'}
+esse.add('power')	  
+print(esse) #{'desk', 'chair', 'fan'}
+
+2. update(): which is used one or more items are adding to a set.
+esse = {'chair', 'desk', 'fan'}
+needs = {'water', 'rest_room', 'power'} #the object which is added to be set not to a set only it can be any iterable objects (list, set, dictionaries, tuples,  etc)
+esse.update(needs)#for multiple items
+print(esse) #{'fan', 'water', 'chair', 'power', 'desk', 'rest_room'}
+esse.update(('single',)) #to add single element using update
+print(esse) #{'fan', 'water', 'single', 'chair', 'power', 'desk', 'rest_room'}
+
+Removing items from set:
+=======================
+wk_set = {'laptop', 'mobile', 'books', 'bag', 'pen'}
+1. pop():
+p_it = wk_set.pop()
+print(p_it) #
+2. remove():
+3. discard():
+4. clear():
+5. del :
+
+
+
+every programmimg language has capability of commenting for the purpose of in-code documentation. 
+comments can be used to explain python code/ to make code readable/ to prevent execution of code 
+while testing code.
+for single line comments ( # )
+for multiple line coomets ( """ )
+
+@for the updated version is python 3.0
+
+programmimg questions:
+=====================
+1. Reverse a string:
+====================
+Ex: name = 'ramesh'
+	print(name[::-1])#hsemar
+	print(name[::1]) #ramesh
+
+2. Stepping in a string:
+=======================	
+	print(name[::2]) #rms
+	print(name[::-2]) #hea
+	print(name[::0] #Value Error slice step cann't be zero.
+Ex: def reverse_str(y):
+		return y[::-1]
+	x = reverse_str(y)
+	print(x)
+	
+3. Reversing a number in python using while loop:
+=================================================
+Ex : num = int(input("Enter a number : ")) #897
+	 reversed_num = 0
+	 while num != 0:	#while loop excutes until condition is false
+		revered_num = reversed_num * 0 + num % 10 
+		#1. 0*10 + 897%10 => 0 + 7 = 7 
+		#2. 7*10 + 89%10 => 70 + 9 = 79
+		#3. 79*10 + 8%10 => 790 + 8 = 798
+		num = num // 10	
+		#897!=0 True /it executes the loop
+			#1. 897//10 = 89.7 here 89 is stored in num and checks 
+		#89!=0 True
+			#2. 89//10 = 8.9  here 8 is stored in num for next iteration
+		#8!=0 True
+			#3. 8//10 = 0.8 here 0 is stored in num
+		#0 != 0 False it terminates the loop execution
+	 print("After reverse %d : " %reversed_num)
+	 
+4. String to list conversion:
+=============================
+my_string = 'my name is ramesh kumar'
+my_list = list(my_string.split(" "))
+print(my_list)
