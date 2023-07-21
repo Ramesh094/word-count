@@ -1,0 +1,13 @@
+input_str = input("Enter a string: ")
+new = {}
+for i in input_str:
+    cc = input_str.count(i)
+    new[i] = cc
+print(new)
+for i in input_str:
+    c = 0
+    for j in input_str:
+        if i == j:
+            c = +1
+    new[i] = c
+print(new)
