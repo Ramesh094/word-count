@@ -1,4 +1,4 @@
-input_str = input("Enter a string: ")
+input_str = input("Enter a string to count: ")
 new = {}
 for i in input_str:
     cc = input_str.count(i)
